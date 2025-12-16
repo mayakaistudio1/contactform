@@ -1,104 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Alexander</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Alexander Popp</title>
 
-  <style>
-    body {
-      font-family: Inter, Arial, sans-serif;
-      background: #f5f5f7;
-      padding: 30px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    .box {
-      max-width: 420px;
-      margin: auto;
-      background: #fff;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+<style>
+:root {
+  --bg-main: #0b0d10;
+  --bg-card: #12151b;
+  --text-main: #ffffff;
+  --text-muted: #9aa0a6;
+  --accent: #00e0b8;
+  --border-soft: rgba(255,255,255,0.08);
+}
 
-    h2 {
-      margin-bottom: 10px;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
 
-    p {
-      color: #555;
-      margin-bottom: 20px;
-    }
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    select, button {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      font-size: 16px;
-    }
+.container {
+  max-width: 520px;
+  width: 100%;
+  padding: 24px;
+}
 
-    button {
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-    }
+.card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 32px 28px;
+  border: 1px solid var(--border-soft);
+}
 
-    .wa {
-      background: #25D366;
-      color: #fff;
-    }
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
 
-    .tg {
-      background: #229ED9;
-      color: #fff;
-    }
-  </style>
+p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.choice-group {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.choice {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--text-main);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.choice:hover {
+  border-color: var(--accent);
+  background: rgba(0,224,184,0.05);
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.icon-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #0f1217;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="box">
-    <h2>Take the first step</h2>
-    <p>Choose what you’re interested in and message Alexander directly.</p>
+<div class="container">
+  <div class="card">
 
-    <select id="interest">
-      <option value="passive income">Passive income</option>
-      <option value="building a team">Building a team</option>
-      <option value="both passive income and a team">Both</option>
-    </select>
+    <h2>Contact Alexander</h2>
+    <p>
+      Choose what you’re interested in.  
+      You’ll be redirected directly — no forms, no waiting.
+    </p>
 
-    <button class="wa" onclick="openWhatsApp()">Write in WhatsApp</button>
-    <button class="tg" onclick="openTelegram()">Write in Telegram</button>
+    <div class="choice-group">
+      <div class="choice">Passive income</div>
+      <div class="choice">Building a team</div>
+      <div class="choice">Just want an overview</div>
+    </div>
+
+    <div class="contact-buttons">
+
+      <!-- WHATSAPP -->
+      <a
+        href="https://wa.me/447380307222?text=Hi%20Alexander,%20I%20came%20from%20your%20page.%20I%E2%80%99d%20like%20a%20short%20overview%20of%20EXFUSION."
+        target="_blank"
+        class="icon-btn"
+        aria-label="WhatsApp"
+      >
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
+
+      <!-- TELEGRAM -->
+      <a
+        href="https://t.me/jazgil"
+        target="_blank"
+        class="icon-btn"
+        aria-label="Telegram"
+      >
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram">
+      </a>
+
+    </div>
+
+    <div class="note">
+      Direct contact. No spam.
+    </div>
+
   </div>
-
-  <script>
-    const telegramUsername = "jazgil";
-    const whatsappNumber = "447380307222";
-
-    function getMessage() {
-      const interest = document.getElementById("interest").value;
-      return encodeURIComponent(
-        "Hi Alexander! I found your page and would like to learn more about EXFUSION. I’m interested in " + interest + "."
-      );
-    }
-
-    function openWhatsApp() {
-      const message = getMessage();
-      window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + message,
-        "_blank"
-      );
-    }
-
-    function openTelegram() {
-      const message = getMessage();
-      window.open(
-        "https://t.me/" + telegramUsername + "?text=" + message,
-        "_blank"
-      );
-    }
-  </script>
+</div>
 
 </body>
 </html>
